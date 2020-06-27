@@ -10,8 +10,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { ResourcesComponent } from './resources/resources.component';
-import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { BioComponent } from './bio/bio.component';
 import { ConflictResolutionComponent } from './services/conflict-resolution/conflict-resolution.component';
@@ -29,8 +27,6 @@ import { WhitePapersComponent } from './resources/white-papers/white-papers.comp
     HomeComponent,
     LoginComponent,
     NavMenuComponent,
-    ResourcesComponent,
-    ServicesComponent,
     AboutComponent,
     BioComponent,
     ConflictResolutionComponent,
