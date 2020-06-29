@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MaterialModule } from './material/material.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { LinkData } from './link-data';
 
 import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
@@ -20,6 +24,8 @@ import { ConflictResolutionComponent } from './services/conflict-resolution/conf
 import { SalesPerformanceComponent } from './services/sales-performance/sales-performance.component';
 import { TeamLeadershipComponent } from './services/team-leadership/team-leadership.component';
 import { WhitePapersComponent } from './resources/white-papers/white-papers.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +47,12 @@ import { WhitePapersComponent } from './resources/white-papers/white-papers.comp
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    HttpClientModule,
+    FormsModule,
+    AppRoutingModule,
+    MaterialModule,
+    InMemoryWebApiModule.forRoot(LinkData, { delay: 1000 }),
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
